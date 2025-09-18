@@ -776,15 +776,12 @@ void BNO055_PrintEulerRaw(void)
 
 void BNO055_SendEulerCAN(void)
 {
-    BNO055_Sensors_t sensorData;
-    ReadData(&sensorData, SENSOR_EULER);
+    BNO055_EulerFloat_t e = BNO055_ReadEulerCorrected();
 
-    // Giữ 2 chữ số thập phân
-    int16_t roll  = (int16_t)(sensorData.Euler.Z * 100);
-    int16_t pitch = (int16_t)(sensorData.Euler.Y * 100);
-    int16_t yaw   = (int16_t)(sensorData.Euler.X * 100);
+    int16_t roll  = (int16_t)(e.Roll  * 100);
+    int16_t pitch = (int16_t)(e.Pitch * 100);
+    int16_t yaw   = (int16_t)(e.Yaw   * 100);
 
-    // Frame 8 byte: [rollH,rollL, pitchH,pitchL, yawH,yawL, 0x00,0x00]
     uint8_t data[8] = {
         (uint8_t)((roll  >> 8) & 0xFF),  (uint8_t)(roll  & 0xFF),
         (uint8_t)((pitch >> 8) & 0xFF),  (uint8_t)(pitch & 0xFF),
@@ -793,6 +790,7 @@ void BNO055_SendEulerCAN(void)
     };
     CAN_SendTopicData(TOPIC_ID_IMU_EULER, data, 8);
 }
+
 
 void BNO055_SendGyroCAN(void)
 {
