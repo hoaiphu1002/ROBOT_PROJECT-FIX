@@ -94,7 +94,7 @@ void BNO055_CheckAndRecover(void)
     }
 
     // --- Sau khi reset, bỏ qua dữ liệu vài trăm ms ---
-    if (!imu_warmup_done && (HAL_GetTick() - imu_warmup_start > 1500)) {
+    if (!imu_warmup_done && (HAL_GetTick() - imu_warmup_start > 2000)) {
         imu_warmup_done = 1;
         printf("✅ IMU warm-up finished, data should be valid now\r\n");
     }
@@ -223,7 +223,7 @@ void Send_All_SensorData_CAN(void)
     if (timer10ms_flag) {
         timer10ms_flag = 0;
 //        BNO055_SendEulerCAN();
-        if (BNO055_IsStable()) {
+        if (BNO055_IsStable()&&(imu_warmup_done)) {
               BNO055_SendEulerCAN();
           } else {
               // bỏ qua dữ liệu trong lúc IMU đang ổn định lại
