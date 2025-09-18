@@ -1,0 +1,6 @@
+../Core/Src/MQ135.c:12:6:MQ135_Config	1
+../Core/Src/MQ135.c:22:7:MQ135_CorrectionFactor	1
+../Core/Src/MQ135.c:29:7:MQ135_ReadRs	3
+../Core/Src/MQ135.c:44:7:MQ135_ReadCorrectedPPM	1
+../Core/Src/MQ135.c:51:6:MQ135_CalibrateRo	1
+../Core/Src/MQ135.c:56:6:MQ135_Send_CAN	1

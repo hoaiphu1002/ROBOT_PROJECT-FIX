@@ -1,0 +1,6 @@
+../Core/Src/rfid.c:46:6:MFRC522_SoftReset	1
+../Core/Src/rfid.c:52:6:checkerror	5
+../Core/Src/rfid.c:63:6:checkstatus	3
+../Core/Src/rfid.c:92:6:printUserName	8
+../Core/Src/rfid.c:134:6:isAuthorizedUID	3
+../Core/Src/rfid.c:145:6:checkRFIDAndControlRelay	10

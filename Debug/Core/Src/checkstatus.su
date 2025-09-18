@@ -1,0 +1,3 @@
+../Core/Src/checkstatus.c:26:6:I2C_Scanner	56	static
+../Core/Src/checkstatus.c:41:6:ADC_CHECK	40	static
+../Core/Src/checkstatus.c:50:6:check_it	88	static

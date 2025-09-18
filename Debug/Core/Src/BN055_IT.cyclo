@@ -1,0 +1,5 @@
+../Core/Src/BN055_IT.c:23:19:BNO055_IT_Read	5
+../Core/Src/BN055_IT.c:50:19:BNO055_IT_Write	5
+../Core/Src/BN055_IT.c:80:6:HAL_I2C_MemRxCpltCallback	2
+../Core/Src/BN055_IT.c:88:6:HAL_I2C_MemTxCpltCallback	2
+../Core/Src/BN055_IT.c:99:6:HAL_I2C_ErrorCallback	2

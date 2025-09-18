@@ -1,0 +1,10 @@
+../Core/Src/PN532.c:9:13:PN532_SPI_Write	1
+../Core/Src/PN532.c:13:16:PN532_SPI_Read	1
+../Core/Src/PN532.c:19:6:PN532_SPI_Init	1
+../Core/Src/PN532.c:26:6:PN532_SPI_Begin	1
+../Core/Src/PN532.c:30:6:PN532_SPI_Wakeup	1
+../Core/Src/PN532.c:36:13:PN532_SPI_IsReady	1
+../Core/Src/PN532.c:44:13:PN532_SPI_WriteFrame	3
+../Core/Src/PN532.c:76:15:PN532_SPI_ReadAckFrame	4
+../Core/Src/PN532.c:96:8:PN532_SPI_WriteCommand	3
+../Core/Src/PN532.c:109:9:PN532_SPI_ReadResponse	13
